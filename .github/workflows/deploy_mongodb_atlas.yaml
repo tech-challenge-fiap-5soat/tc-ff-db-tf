@@ -2,12 +2,13 @@ name: Deploy to MongoDB Atlas
 
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [closed]
     branches:
       - main
 
 jobs:
   build:
+    if: ${{ github.event.pull_request.merged }}
     name: Build
     runs-on: ubuntu-latest
     steps:
