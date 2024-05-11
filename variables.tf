@@ -13,6 +13,11 @@ variable "project_id" {
   description = "Project Id"
 }
 
+variable "org_id" {
+  type = string
+  description = "Organization ID"
+}
+
 variable "cluster_name" {
   type = string
   description = "Cluster name"
